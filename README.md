@@ -1,12 +1,17 @@
 #  Mean and variance of a discrete  distribution
 
-## AIM: 
-To find mean and variance of arrival of objects from the feeder using probability distribution.
 
-## SOFTWARE REQUIRED:  
-Python and Visual components tool.
+# Aim : 
 
-## THEORY:
+To find mean and variance of arrival of objects from the feeder using probability distribution
+
+
+# Software required :  
+
+Python and Visual components tool
+
+# Theory:
+
 The expectation or the mean of a discrete random variable is a weighted average of all possible
 values of the random variable. The weights are the probabilities associated with the corresponding values. 
 It is calculated as,
@@ -18,7 +23,9 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 ![image](https://user-images.githubusercontent.com/103921593/192938695-99fedc01-34d5-4d36-84df-5880e766ed0c.png)
 
-## PROCEDURE:
+
+# Procedure :
+
 1. Construct frequency distribution for the data
 
 2. Find the  probability distribution from frequency distribution.
@@ -35,44 +42,44 @@ It shows the distance of a random variable from its mean. It is calcualted as
   
       ![image](https://user-images.githubusercontent.com/103921593/192942852-913550a9-fabe-4a55-b956-0487b18bbd97.png)
 
-## EXPERIMENT:
+
+# Experiment :
+
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
-## PROGRAM:
+# Program :
 ```
-Name    : Parshwanath M
-Roll no : 212221230073
+Developed by: Parshwanath M
+Reg No: 212221230073
 ```
-
 ```
 import numpy as np
 L=[int(i) for i in input().split()]
 
-N=len(L);M=max(L)
-x=list();f=list()
+N=len(L); M=max(L)
+x=list(); f=list()
 for i in range (M+1):
-  c=0
-  for j in range(N):
-    if L[j]==1:
-      c=c+1
-  f.append(c)
-  x.append(i)
+    c = 0
+    for j in range(N):
+        if L[j]==i:
+            c=c+1
+    f.append(c)
+    x.append(i)
 sf=np.sum(f)
-p=list()  
-
+p=list()
 for i in range(M+1):
-  p.append(f[i]/sf)
+    p.append(f[i]/sf) 
 mean=np.inner(x,p)
 EX2=np.inner(np.square(x),p)
-var=EX2-mean**2
+var=EX2-mean**2 
 SD=np.sqrt(var)
-print("The Mean arrival rate is %.3f"%mean)
-print("The Variance of arrival from feeder is %.3f"%var)
-print("The Standard deviation of arrival from feeder is %.3f"%SD)
+print("Mean arrival rate is %.2f "%mean)
+print("Variance of arrival from feeder is %.2f "%var) 
+print("Standard deviation of arrival from feeder is %.2F "%SD)
 ```
 
-## OUTPUT: 
-![op1](https://user-images.githubusercontent.com/95388047/231433849-774b3aa9-74cf-4e90-861a-936ef56a746f.png)
+# Output : 
+![230058252-48a4f022-c637-49c7-bfb3-c653763f9391](https://user-images.githubusercontent.com/95388047/232845203-7541d1df-e796-4a72-995f-6b72485b86bf.png)
 
-## RESULT:
-The mean and variance of arrivals of objects from feeder using probability distribution is calculated.
+# Results :
+The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
